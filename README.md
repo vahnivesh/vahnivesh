@@ -155,6 +155,39 @@ It considers **terahertz (THz) sensing** and **volatile organic compound (VOC) s
 
 <br>
 
+<a href="https://github.com/vahnivesh/HeritagePin-BareMetal">
+  <img
+    src="./assets/heritagepin.svg"
+    width="100%"
+    alt="heritagepin — People Places Stories."
+  />
+</a>
+
+### HeritagePin
+
+**Selected project / 03**
+
+**HeritagePin** is the second featured project in my portfolio. Explore its repository for the project overview and implementation.
+
+<!--
+  Expand this section once the project details are confirmed:
+  - What problem does 6sense address?
+  - What are its main features?
+  - Which technologies does it use?
+  - What has been implemented or demonstrated?
+-->
+
+<p>
+  <a href="https://github.com/vahnivesh/HeritagePin-BareMetal">
+    <img src="https://img.shields.io/badge/OPEN_REPOSITORY-c4b5fd?style=for-the-badge&logo=github&logoColor=18212f" alt="Open HeritagePin repository" />
+  </a>
+  <a href="https://github.com/vahnivesh/HeritagePin-BareMeta#readme">
+    <img src="https://img.shields.io/badge/READ_OVERVIEW-202938?style=for-the-badge&logo=readthedocs&logoColor=c4b5fd" alt="Read HeritagePin overview" />
+  </a>
+</p>
+
+<br>
+
 ## `03` / Developer mindset
 
 ```js
