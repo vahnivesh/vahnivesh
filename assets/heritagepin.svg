@@ -1,1 +1,1057 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1000" height="300"
+     viewBox="0 0 1000 300"
+     role="img"
+     aria-labelledby="title description">
 
+  <title id="title">HeritagePin — People Places Stories</title>
+
+  <desc id="description">
+    HeritagePin is a digital heritage platform connecting heritage sites,
+    digital archives, communities and visitors through an interactive
+    heritage mapping system.
+  </desc>
+
+  <defs>
+
+    <!-- ============================================ -->
+    <!-- BACKGROUND GRID -->
+    <!-- ============================================ -->
+
+    <pattern id="grid"
+             width="22"
+             height="22"
+             patternUnits="userSpaceOnUse">
+
+      <path d="M22 0H0V22"
+            fill="none"
+            stroke="#172126"
+            stroke-opacity=".075"/>
+
+    </pattern>
+
+
+    <!-- ============================================ -->
+    <!-- RADIAL GLOW -->
+    <!-- ============================================ -->
+
+    <radialGradient id="pinGlow">
+
+      <stop offset="0%"
+            stop-color="#f4c95d"
+            stop-opacity=".45"/>
+
+      <stop offset="55%"
+            stop-color="#f4c95d"
+            stop-opacity=".12"/>
+
+      <stop offset="100%"
+            stop-color="#f4c95d"
+            stop-opacity="0"/>
+
+    </radialGradient>
+
+
+    <!-- ============================================ -->
+    <!-- STYLES -->
+    <!-- ============================================ -->
+
+    <style>
+
+      text {
+        font-family:
+          Arial,
+          Helvetica,
+          sans-serif;
+      }
+
+      .mono {
+        font-family:
+          Consolas,
+          'Liberation Mono',
+          monospace;
+      }
+
+
+      /* -------------------------------------------- */
+      /* Data paths */
+      /* -------------------------------------------- */
+
+      .data-flow {
+        stroke-dasharray: 4 10;
+        animation:
+          dataFlow 3s linear infinite;
+      }
+
+      @keyframes dataFlow {
+
+        to {
+          stroke-dashoffset: -56;
+        }
+
+      }
+
+
+      /* -------------------------------------------- */
+      /* Expanding heritage scan */
+      /* -------------------------------------------- */
+
+      .scan-ring {
+        transform-box: fill-box;
+        transform-origin: center;
+        animation: scan 3.5s ease-out infinite;
+      }
+
+      .scan-ring:nth-child(2) {
+        animation-delay: 1.15s;
+      }
+
+      .scan-ring:nth-child(3) {
+        animation-delay: 2.3s;
+      }
+
+      @keyframes scan {
+
+        0% {
+          transform: scale(.35);
+          opacity: .75;
+        }
+
+        70% {
+          opacity: .18;
+        }
+
+        100% {
+          transform: scale(1.35);
+          opacity: 0;
+        }
+
+      }
+
+
+      /* -------------------------------------------- */
+      /* Central pin */
+      /* -------------------------------------------- */
+
+      .pin {
+        transform-box: fill-box;
+        transform-origin: center;
+        animation: pinPulse 2.5s ease-in-out infinite;
+      }
+
+      @keyframes pinPulse {
+
+        0%, 100% {
+          transform: translateY(0);
+        }
+
+        50% {
+          transform: translateY(-4px);
+        }
+
+      }
+
+
+      /* -------------------------------------------- */
+      /* Moving map markers */
+      /* -------------------------------------------- */
+
+      .orbit-marker-1 {
+        animation:
+          orbitOne 6s linear infinite;
+        transform-origin: 790px 151px;
+      }
+
+      .orbit-marker-2 {
+        animation:
+          orbitTwo 7s linear infinite;
+        transform-origin: 790px 151px;
+      }
+
+      .orbit-marker-3 {
+        animation:
+          orbitThree 8s linear infinite;
+        transform-origin: 790px 151px;
+      }
+
+
+      @keyframes orbitOne {
+
+        from {
+          transform: rotate(0deg);
+        }
+
+        to {
+          transform: rotate(360deg);
+        }
+
+      }
+
+
+      @keyframes orbitTwo {
+
+        from {
+          transform: rotate(120deg);
+        }
+
+        to {
+          transform: rotate(480deg);
+        }
+
+      }
+
+
+      @keyframes orbitThree {
+
+        from {
+          transform: rotate(240deg);
+        }
+
+        to {
+          transform: rotate(600deg);
+        }
+
+      }
+
+
+      /* -------------------------------------------- */
+      /* Phone screen blink */
+      /* -------------------------------------------- */
+
+      .phone-pin {
+        animation:
+          phoneBlink 2s ease-in-out infinite;
+      }
+
+      @keyframes phoneBlink {
+
+        0%, 100% {
+          opacity: 1;
+        }
+
+        50% {
+          opacity: .35;
+        }
+
+      }
+
+
+      /* -------------------------------------------- */
+      /* Reduced motion */
+      /* -------------------------------------------- */
+
+      @media (prefers-reduced-motion: reduce) {
+
+        .data-flow,
+        .scan-ring,
+        .pin,
+        .orbit-marker-1,
+        .orbit-marker-2,
+        .orbit-marker-3,
+        .phone-pin {
+          animation: none;
+        }
+
+      }
+
+    </style>
+
+  </defs>
+
+
+  <!-- ============================================ -->
+  <!-- PAPER / BACKGROUND -->
+  <!-- ============================================ -->
+
+  <rect width="1000"
+        height="300"
+        fill="#e4eff2"/>
+
+
+  <!-- ============================================ -->
+  <!-- HARD SHADOW -->
+  <!-- ============================================ -->
+
+  <rect x="26"
+        y="26"
+        width="956"
+        height="256"
+        fill="#191919"/>
+
+
+  <!-- ============================================ -->
+  <!-- MAIN CARD -->
+  <!-- ============================================ -->
+
+  <rect x="18"
+        y="18"
+        width="956"
+        height="256"
+        fill="#dbecef"
+        stroke="#191919"
+        stroke-width="3.5"/>
+
+
+  <!-- ============================================ -->
+  <!-- GRID -->
+  <!-- ============================================ -->
+
+  <rect x="20"
+        y="53"
+        width="952"
+        height="219"
+        fill="url(#grid)"/>
+
+
+  <!-- ============================================ -->
+  <!-- TOPOGRAPHIC LINES -->
+  <!-- ============================================ -->
+
+  <g fill="none"
+     stroke="#718990"
+     stroke-width="1"
+     opacity=".28">
+
+    <path d="
+      M470 78
+      C430 95 442 115 478 126
+      C515 138 505 153 470 165
+      C430 179 440 199 480 208
+      C515 217 518 238 482 255"/>
+
+    <path d="
+      M485 72
+      C447 91 455 110 491 121
+      C528 133 519 151 485 162
+      C449 174 454 194 492 204
+      C525 214 530 237 497 259"/>
+
+    <path d="
+      M500 76
+      C468 92 473 107 507 118
+      C540 130 534 147 503 158
+      C470 170 473 189 507 201
+      C537 211 543 232 515 255"/>
+
+  </g>
+
+
+  <!-- ============================================ -->
+  <!-- HEADER -->
+  <!-- ============================================ -->
+
+  <rect x="18"
+        y="18"
+        width="956"
+        height="35"
+        fill="#191919"/>
+
+
+  <text x="37"
+        y="41"
+        class="mono"
+        font-size="11"
+        font-weight="700"
+        letter-spacing="1.2"
+        fill="#ffffff">
+
+    HERITAGEPIN / PEOPLE PLACES STORIES
+
+  </text>
+
+
+  <!-- Header status dots -->
+
+  <circle cx="827"
+          cy="35"
+          r="5"
+          fill="#f4c95d"/>
+
+  <circle cx="847"
+          cy="35"
+          r="5"
+          fill="#f4c95d"/>
+
+  <circle cx="867"
+          cy="35"
+          r="5"
+          fill="#f4c95d"/>
+
+
+  <path d="M885 35H935"
+        stroke="#ffffff"
+        stroke-width="2"/>
+
+
+  <text x="954"
+        y="41"
+        text-anchor="end"
+        class="mono"
+        font-size="10"
+        font-weight="700"
+        fill="#dbecef">
+
+    PROJECT 01
+
+  </text>
+
+
+  <!-- ============================================ -->
+  <!-- LEFT CONTENT -->
+  <!-- ============================================ -->
+
+  <text x="38"
+        y="136"
+        font-size="61"
+        font-weight="900"
+        letter-spacing="-4"
+        fill="#191919">
+
+    HERITAGEPIN
+
+  </text>
+
+
+  <text x="42"
+        y="174"
+        class="mono"
+        font-size="15"
+        font-weight="700"
+        letter-spacing="1"
+        fill="#191919">
+
+    PIN. PRESERVE. DISCOVER.
+
+  </text>
+
+
+  <text x="42"
+        y="202"
+        font-size="14"
+        fill="#34464b">
+
+    A digital platform to explore, document
+
+  </text>
+
+
+  <text x="42"
+        y="221"
+        font-size="14"
+        fill="#34464b">
+
+    and protect our cultural heritage.
+
+  </text>
+
+
+  <!-- ============================================ -->
+  <!-- YELLOW CTA -->
+  <!-- ============================================ -->
+
+  <rect x="46"
+        y="237"
+        width="250"
+        height="27"
+        fill="#191919"/>
+
+
+  <rect x="42"
+        y="233"
+        width="250"
+        height="27"
+        fill="#f4c95d"
+        stroke="#191919"
+        stroke-width="2"/>
+
+
+  <text x="55"
+        y="251"
+        class="mono"
+        font-size="9"
+        font-weight="700"
+        letter-spacing=".6"
+        fill="#191919">
+
+    MAP CULTURE FOR TOMORROW
+
+  </text>
+
+
+  <path d="M275 246H284M279 242L284 246L279 250"
+        fill="none"
+        stroke="#191919"
+        stroke-width="2"/>
+
+
+  <!-- ============================================ -->
+  <!-- RIGHT ARCHITECTURE DIVIDER -->
+  <!-- ============================================ -->
+
+  <path d="M614 73V255"
+        fill="none"
+        stroke="#191919"
+        stroke-width="2"
+        stroke-dasharray="3 7"/>
+
+
+  <!-- ============================================ -->
+  <!-- CENTRAL MAP GLOW -->
+  <!-- ============================================ -->
+
+  <circle cx="790"
+          cy="151"
+          r="74"
+          fill="url(#pinGlow)"/>
+
+
+  <!-- ============================================ -->
+  <!-- ORBIT RINGS -->
+  <!-- ============================================ -->
+
+  <g fill="none"
+     stroke="#f4c95d">
+
+    <circle class="scan-ring"
+            cx="790"
+            cy="151"
+            r="35"
+            stroke-width="2"/>
+
+    <circle class="scan-ring"
+            cx="790"
+            cy="151"
+            r="55"
+            stroke-width="2"/>
+
+    <circle class="scan-ring"
+            cx="790"
+            cy="151"
+            r="76"
+            stroke-width="1.5"/>
+
+  </g>
+
+
+  <!-- Permanent map rings -->
+
+  <g fill="none"
+     stroke="#f4c95d"
+     stroke-opacity=".4">
+
+    <circle cx="790"
+            cy="151"
+            r="43"
+            stroke-width="1"/>
+
+    <circle cx="790"
+            cy="151"
+            r="63"
+            stroke-width="1"/>
+
+    <circle cx="790"
+            cy="151"
+            r="86"
+            stroke-width="1"/>
+
+  </g>
+
+
+  <!-- ============================================ -->
+  <!-- CONNECTION PATHS -->
+  <!-- ============================================ -->
+
+  <g fill="none"
+     stroke="#657d83"
+     stroke-width="2">
+
+    <path d="M765 139L704 101"/>
+
+    <path d="M815 139L879 101"/>
+
+    <path d="M790 176V219"/>
+
+    <path d="M790 151
+             C750 119 735 106 704 101"/>
+
+  </g>
+
+
+  <!-- Animated connection lines -->
+
+  <g class="data-flow"
+     fill="none"
+     stroke="#191919"
+     stroke-width="2.5">
+
+    <path d="M765 139L704 101"/>
+
+    <path d="M815 139L879 101"/>
+
+    <path d="M790 176V219"/>
+
+  </g>
+
+
+  <!-- ============================================ -->
+  <!-- ORBITING DATA MARKERS -->
+  <!-- ============================================ -->
+
+  <g class="orbit-marker-1">
+
+    <circle cx="790"
+            cy="68"
+            r="5"
+            fill="#f4c95d"
+            stroke="#191919"
+            stroke-width="2"/>
+
+  </g>
+
+
+  <g class="orbit-marker-2">
+
+    <circle cx="790"
+            cy="68"
+            r="4"
+            fill="#f4c95d"
+            stroke="#191919"
+            stroke-width="2"/>
+
+  </g>
+
+
+  <g class="orbit-marker-3">
+
+    <circle cx="790"
+            cy="68"
+            r="4"
+            fill="#f4c95d"
+            stroke="#191919"
+            stroke-width="2"/>
+
+  </g>
+
+
+  <!-- ============================================ -->
+  <!-- HERITAGE SITE -->
+  <!-- ============================================ -->
+
+  <g transform="translate(692 97)"
+     stroke="#191919"
+     stroke-width="2.5">
+
+    <!-- Main building -->
+
+    <rect x="-20"
+          y="-4"
+          width="40"
+          height="25"
+          fill="#fffaf0"/>
+
+
+    <!-- Roof -->
+
+    <path d="M-27-4L0-23L27-4Z"
+          fill="#fffaf0"/>
+
+
+    <!-- Dome -->
+
+    <path d="M-8-13Q0-22 8-13"
+          fill="#f4c95d"/>
+
+
+    <!-- Columns -->
+
+    <path d="M-13 2V17"
+          fill="none"/>
+
+    <path d="M0 2V17"
+          fill="none"/>
+
+    <path d="M13 2V17"
+          fill="none"/>
+
+
+    <!-- Base -->
+
+    <path d="M-26 21H26"
+          fill="none"/>
+
+
+    <!-- Small flag -->
+
+    <path d="M0-23V-29"
+          fill="none"/>
+
+    <path d="M0-29H7L0-26Z"
+          fill="#f4c95d"/>
+
+  </g>
+
+
+  <!-- ============================================ -->
+  <!-- DIGITAL ARCHIVE -->
+  <!-- ============================================ -->
+
+  <g transform="translate(896 97)"
+     stroke="#191919"
+     stroke-width="2.5">
+
+    <path d="M-21-18H9L20-7V21H-21Z"
+          fill="#fffaf0"/>
+
+
+    <path d="M9-18V-7H20"
+          fill="none"/>
+
+
+    <path d="M-14-2H13"
+          fill="none"/>
+
+    <path d="M-14 6H13"
+          fill="none"/>
+
+    <path d="M-14 14H7"
+          fill="none"/>
+
+
+    <!-- Archive image -->
+
+    <rect x="-9"
+          y="-14"
+          width="18"
+          height="7"
+          fill="#f4c95d"
+          stroke-width="1.5"/>
+
+  </g>
+
+
+  <!-- ============================================ -->
+  <!-- CENTRAL HERITAGE PIN -->
+  <!-- ============================================ -->
+
+  <g class="pin">
+
+    <!-- Shadow -->
+
+    <ellipse cx="790"
+             cy="184"
+             rx="25"
+             ry="5"
+             fill="#191919"
+             opacity=".25"/>
+
+
+    <!-- Pin -->
+
+    <path d="
+      M790 120
+      C772 120
+      759 133
+      759 150
+      C759 173
+      790 193
+      790 193
+      C790 193
+      821 173
+      821 150
+      C821 133
+      808 120
+      790 120
+      Z"
+      fill="#f4c95d"
+      stroke="#191919"
+      stroke-width="3"/>
+
+
+    <!-- Monument -->
+
+    <path d="M778 157H802"
+          stroke="#191919"
+          stroke-width="2.5"/>
+
+    <path d="M781 157V145H799V157"
+          fill="#191919"/>
+
+    <path d="M779 145L790 137L801 145Z"
+          fill="#191919"/>
+
+    <path d="M785 146V157"
+          stroke="#f4c95d"
+          stroke-width="1.5"/>
+
+    <path d="M790 146V157"
+          stroke="#f4c95d"
+          stroke-width="1.5"/>
+
+    <path d="M795 146V157"
+          stroke="#f4c95d"
+          stroke-width="1.5"/>
+
+  </g>
+
+
+  <!-- ============================================ -->
+  <!-- MOBILE EXPLORATION -->
+  <!-- ============================================ -->
+
+  <g transform="translate(790 239)"
+     stroke="#191919"
+     stroke-width="2.5">
+
+    <rect x="-13"
+          y="-21"
+          width="26"
+          height="42"
+          rx="3"
+          fill="#fffaf0"/>
+
+
+    <rect x="-8"
+          y="-15"
+          width="16"
+          height="22"
+          fill="#dbecef"/>
+
+
+    <!-- Screen map -->
+
+    <path d="M-6-8L0-12L6-7L1-2L-6 2Z"
+          fill="none"
+          stroke="#879ba0"
+          stroke-width="1"/>
+
+
+    <!-- Pin -->
+
+    <g class="phone-pin">
+
+      <path d="
+        M0-8
+        C-4-8-6-5-6-2
+        C-6 2 0 7 0 7
+        C0 7 6 2 6-2
+        C6-5 4-8 0-8Z"
+        fill="#f4c95d"
+        stroke="#191919"
+        stroke-width="1.5"/>
+
+      <circle cx="0"
+              cy="-2"
+              r="2"
+              fill="#191919"
+              stroke="none"/>
+
+    </g>
+
+
+    <!-- Home button -->
+
+    <circle cx="0"
+            cy="15"
+            r="2"
+            fill="#191919"
+            stroke="none"/>
+
+  </g>
+
+
+  <!-- ============================================ -->
+  <!-- LABELS -->
+  <!-- ============================================ -->
+
+  <g class="mono"
+     font-size="8"
+     font-weight="700"
+     letter-spacing=".3"
+     fill="#191919"
+     text-anchor="middle">
+
+    <text x="692"
+          y="135">
+      HERITAGE SITE
+    </text>
+
+
+    <text x="896"
+          y="135">
+      DIGITAL ARCHIVE
+    </text>
+
+
+    <text x="790"
+          y="207">
+      HERITAGE PIN
+    </text>
+
+
+    <text x="790"
+          y="257">
+      EXPLORE ON THE GO
+    </text>
+
+  </g>
+
+
+  <!-- ============================================ -->
+  <!-- RIGHT-SIDE INFORMATION -->
+  <!-- ============================================ -->
+
+  <g class="mono"
+     font-size="7.5"
+     font-weight="700"
+     fill="#34464b">
+
+    <text x="936"
+          y="163">
+      LOCATE
+    </text>
+
+    <text x="936"
+          y="175">
+      LEARN
+    </text>
+
+    <text x="936"
+          y="187">
+      CONTRIBUTE
+    </text>
+
+    <text x="936"
+          y="199">
+      PRESERVE
+    </text>
+
+  </g>
+
+
+  <!-- ============================================ -->
+  <!-- MAP MARKERS -->
+  <!-- ============================================ -->
+
+  <g fill="#191919">
+
+    <circle cx="642"
+            cy="226"
+            r="3"/>
+
+    <circle cx="653"
+            cy="241"
+            r="2"/>
+
+    <circle cx="942"
+            cy="218"
+            r="3"/>
+
+    <circle cx="928"
+            cy="229"
+            r="2"/>
+
+  </g>
+
+
+  <!-- ============================================ -->
+  <!-- BOTTOM LEFT META -->
+  <!-- ============================================ -->
+
+  <text x="42"
+        y="273"
+        class="mono"
+        font-size="8"
+        font-weight="700"
+        letter-spacing=".8"
+        fill="#34464b">
+
+    PEOPLE / PLACES / STORIES / IMPACT
+
+  </text>
+
+
+  <!-- ============================================ -->
+  <!-- BOTTOM RIGHT DARK FOOTER -->
+  <!-- ============================================ -->
+
+  <path d="
+    M810 274
+    L834 247
+    H895
+    L913 230
+    H974
+    V274
+    Z"
+    fill="#191919"/>
+
+
+  <path d="M846 258H899"
+        stroke="#ffffff"
+        stroke-width="1.5"/>
+
+
+  <text x="957"
+        y="253"
+        text-anchor="end"
+        class="mono"
+        font-size="7"
+        letter-spacing=".7"
+        fill="#dbecef">
+
+    CULTURAL HERITAGE
+
+  </text>
+
+
+  <text x="957"
+        y="264"
+        text-anchor="end"
+        class="mono"
+        font-size="7"
+        letter-spacing=".7"
+        fill="#dbecef">
+
+    A BRIGHTER TOMORROW
+
+  </text>
+
+
+  <!-- ============================================ -->
+  <!-- TECHNICAL COORDINATES -->
+  <!-- ============================================ -->
+
+  <text x="635"
+        y="77"
+        class="mono"
+        font-size="7"
+        fill="#526a70">
+
+    LAT 12.9716
+
+  </text>
+
+
+  <text x="865"
+        y="77"
+        class="mono"
+        font-size="7"
+        fill="#526a70">
+
+    HERITAGE NODE
+
+  </text>
+
+
+  <text x="945"
+        y="266"
+        text-anchor="end"
+        class="mono"
+        font-size="7"
+        font-weight="700"
+        fill="#ffffff">
+
+    HP-01
+
+  </text>
+
+</svg>
