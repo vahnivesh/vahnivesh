@@ -167,7 +167,7 @@ It considers **terahertz (THz) sensing** and **volatile organic compound (VOC) s
 
 **Selected project / 03**
 
-**HeritagePin** is the second featured project in my portfolio. Explore its repository for the project overview and implementation.
+**HeritagePin** is the third featured project in my portfolio. Explore its repository for the project overview and implementation.
 
 <!--
   Expand this section once the project details are confirmed:
